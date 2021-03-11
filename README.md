@@ -25,6 +25,8 @@ $ /Applications/Htmlcoin-Qt.app/Contents/MacOS/Htmlcoin-Qt -testnet -server -rpc
 ```
 2. Deploy HRC721 using Solar. This command should be executed under the HRC721Token directory. The RPC parameters of the full node you start above should be specified here. You can replace the term *name* and *symbol* with anything you want.
 ```
+WINDOWS $solar deploy contracts/HRC721.sol --htmlcoin_rpc=http://user:password@127.0.0.1:4889 [\"AlthashCoin\",\"AHC\"]
+or
 $ solar deploy contracts/HRC721.sol '["name","symbol"]' --htmlcoin_rpc=http://USER:PASSWORD@127.0.0.1:4889
 exec: solc [contracts/HRC721.sol --combined-json bin,metadata --optimize --allow-paths /Users/htmlcoin/Code/HRC721Token/HRC721Token]
 cli gasPrice 40 40
