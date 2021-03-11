@@ -1,14 +1,14 @@
 const arg = require('arg');
-const {Qtum} = require('qtumjs');
+const {Htmlcoin} = require('htmlcoinjs');
 
 const args = arg({
-    '--qtum_rpc':   String,
+    '--htmlcoin_rpc':   String,
     '--solar_file': String,
 });
 
 const repo = require(args['--solar_file']);
-const qtum = new Qtum(args['--qtum_rpc'], repo);
-const contract = qtum.contract('contracts/QRC721.sol');
+const htmlcoin = new Htmlcoin(args['--htmlcoin_rpc'], repo);
+const contract = htmlcoin.contract('contracts/HRC721.sol');
 
 async function getData() {
     let res = {token: []};
