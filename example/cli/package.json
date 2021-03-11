@@ -1,24 +1,25 @@
 {
-  "name": "qrc721-cli",
+  "name": "hrc721-cli",
   "version": "1.0.0",
-  "description": "QRC721 Client",
+  "description": "HRC721 Client",
   "repository": {
     "type": "git",
-    "url": "https://github.com/qtumproject/QRC721Token"
+    "url": "https://github.com/htmlcoin/HRC721Token"
   },
   "keywords": [
-    "QRC721",
-    "Qtum",
+    "HRC721",
+    "Htmlcoin",
     "solidity",
+    "althash",
     "contract"
   ],
   "author": "ZhengYi@Qtum <zhengyi@qtum.org>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/qtumproject/QRC721Token/issues"
+    "url": "https://github.com/htmlcoin/HRC721Token/issues"
   },
   "dependencies": {
     "arg": "2.0.0",
-    "qtumjs": "1.9.1"
+    "htmlcoinjs": "1.7.3"
   }
 }
