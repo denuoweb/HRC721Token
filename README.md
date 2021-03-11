@@ -13,12 +13,12 @@ You can refer to [this article](https://medium.com/@qtumx/understanding-nft-non-
 2. Install [Solar](https://github.com/htmlcoin/solar). Solar is a smart contract deployment tool of Htmlcoin.
 3. Download this project and install dependencies, like this:
 ```
-$ git clone https://github.com/htmlcoin/QRC721Token.git
-$ cd QRC721Token
+$ git clone https://github.com/htmlcoin/HRC721Token.git
+$ cd HRC721Token
 $ npm install
 ```
 
-## Deploy QRC721
+## Deploy HRC721
 1. Start a Htmlcoin full node. For example, a testnet Htmlcoin QT node can be started on Mac like follows. Here you'd better specify the user name, password and port for RPC interfaces. Moreover, you should have some Htmlcoin coins in the node for contract gas.
 ```
 $ /Applications/Htmlcoin-Qt.app/Contents/MacOS/Htmlcoin-Qt -testnet -server -rpcuser=USER -rpcpassword=PASSWORD -rpcport=4889
@@ -26,7 +26,7 @@ $ /Applications/Htmlcoin-Qt.app/Contents/MacOS/Htmlcoin-Qt -testnet -server -rpc
 2. Deploy HRC721 using Solar. This command should be executed under the HRC721Token directory. The RPC parameters of the full node you start above should be specified here. You can replace the term *name* and *symbol* with anything you want.
 ```
 $ solar deploy contracts/HRC721.sol '["name","symbol"]' --htmlcoin_rpc=http://USER:PASSWORD@127.0.0.1:4889
-exec: solc [contracts/HRC721.sol --combined-json bin,metadata --optimize --allow-paths /Users/htmlcoin/Code/HRC721Token/QRC721Token]
+exec: solc [contracts/HRC721.sol --combined-json bin,metadata --optimize --allow-paths /Users/htmlcoin/Code/HRC721Token/HRC721Token]
 cli gasPrice 40 40
 🚀  All contracts confirmed
    deployed contracts/HRC721.sol => 780e2578b08dddc56ca518277a18a2fb6f14da61
@@ -57,7 +57,7 @@ cli gasPrice 40 40
 
 ## Interact with HRC721
 ### Using js
-See [example/cli](https://github.com/qtumproject/HRC721Token/tree/master/example/cli).
+See [example/cli](https://github.com/htmlcoin/HRC721Token/tree/master/example/cli).
 
 ### Using Htmlcoin QT
 1. Mint some HRC721 tokens. 
